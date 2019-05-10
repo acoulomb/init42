@@ -1,0 +1,17 @@
+#! /bin/sh
+
+CRONTAB="/etc/crontab"
+CRONTAB_CHECKSUM="/var/log/crontab_checksum"
+touch $CRONTAB_CHECKSUM
+MD5_LAST="$(cat $CRONTAB_CHECKSUM)"
+MD5_NOW="$(sudo md5sum ${CRONTAB} | cut -d' ' -f1)"
+SUBJECT="crontab has been modified"
+MSG="you should take a look at the /etc/crontab file !"
+if [ "${MD5_LAST}" != "${MD5_NOW}" ]; then
+   echo "${MSG}" | mail -s "${SUBJECT}" root
+fi
+echo "${MD5_NOW}" > ${CRONTAB_CHECKSUM}
+
+# Daily task at midnight, do this :
+# crontab -e
+# 00 00 * * * root /bin/sh /usr/local/sbin/04

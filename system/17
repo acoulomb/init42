@@ -1,0 +1,4 @@
+sudo iptables -L -n
+
+#-L lists all the rules
+#-n give the numeric output (IP adress and port number)

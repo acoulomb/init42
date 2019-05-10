@@ -1,0 +1,5 @@
+nslookup slash16.org
+
+#nslookup is a program to query Internet domain name servers. 
+#host slash16.org #| head -1 | cut -d' ' -f4
+

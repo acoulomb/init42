@@ -1,0 +1,3 @@
+sudo tail -f /var/log/syslog &
+
+#the & launches the process in background

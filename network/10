@@ -1,0 +1,3 @@
+traceroute slash16.org
+
+#traceroute shows the peripherals between two DNS through which datagrams pass.

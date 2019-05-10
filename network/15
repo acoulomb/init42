@@ -1,0 +1,5 @@
+The local DNS entries are stored in /etc/hosts.
+
+The computer file hosts is an operating system file that maps hostnames to IP
+addresses. In its function of resolving host names, the hosts file may be used
+to define any hostname or domain name for use in the local system.

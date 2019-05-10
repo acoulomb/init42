@@ -1,0 +1,3 @@
+netstat -rn | grep default | head -1 | cut -d ' ' -f13
+
+#-r displays the routing tables and -n prints the numeric adress.

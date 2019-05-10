@@ -1,0 +1,3 @@
+ifconfig -l
+
+#-l : The -l flag may be used to list all available interfaces on the system, with no other additional information.

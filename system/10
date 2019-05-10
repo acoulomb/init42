@@ -1,0 +1,4 @@
+fdisk -l
+
+#fdisk : f stands for fixed
+#-l lists the partition tables

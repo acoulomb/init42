@@ -1,0 +1,5 @@
+sudo du -h -d1 /var
+
+#du : disk usage
+#-h : human readble size
+#-d1 : only 1 depth of directory

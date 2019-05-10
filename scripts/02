@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#update and store in update_script.log
+touch /var/log/update_script.log
+sudo apt-get update && sudo apt-upgrade -y >> /var/log/update_script.log
+
+#program once a week at 4 a.m.
+touch /etc/cron.weekly/02
+chmod 755 02
+
+#If you want to repeat this operation weekly:
+#Make sure this script is inside /usr/local/sbin, for example /user/local/sbin/02.
+#/usr/local/sbin is for root scripts, it's needed to execute sudo commands.
+#Use the crontab command:
+#crontab -e
+#00 4 * * 1	root /bin/sh /usr/local/sbin/02

@@ -1,0 +1,3 @@
+dig slash16.org @8.8.8.8
+
+#dig is a flexible tool for interrogating DNS name servers.
